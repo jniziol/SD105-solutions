@@ -1,0 +1,138 @@
+:root {
+  --header: #d8e0d9;
+  --bodybg: #fafefaff;
+  --green: #829b74ff;
+  --honeydew: #E6F5E0;
+  --hover: #6B825E;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
+  font-family: 'Open Sans', sans-serif;
+  color: #313131;
+}
+
+body {
+  background-color: var(--bodybg);
+}
+
+ul {
+  list-style: none;
+}
+
+header {  
+  height: 300px;
+  position: relative;
+  overflow: hidden;  
+}
+
+header::before {
+  border-radius: 100%;
+  position: absolute;
+  background-color: var(--header);
+  left: 50%;
+  top: -900px;
+  content: '';
+  bottom: 0;
+  width: 3000px;
+  transform: translate(-50%, 0);
+}
+
+li {
+  border: 3px solid var(--honeydew);  
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+  padding: 20px;
+}
+
+li:hover {
+  background-color: var(--honeydew);
+  border-color: var(--green);
+}
+
+main {
+  width: 1280px;
+  font-size: 1.3rem;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100px);
+}
+
+.question-wrapper {
+  position: relative;
+}
+
+.question-count {
+  background-color: var(--green);
+  display: inline-block;
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 30px;
+  border-radius: 40px;
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  margin-bottom: 30px;
+}
+
+/* .answers li, .question {
+  border: 3px solid var(--honeydew);  
+  border-radius: 10px;
+  background-color: white;
+} */
+
+.answers li {
+  cursor: pointer;
+}
+
+
+.question {
+  padding: 50px 100px 30px;
+  margin-bottom: 30px;
+  border: 3px solid var(--honeydew);
+  border-radius: 10px;
+  background-color: white;
+}
+
+button {
+  font-size: 1.3rem;
+  background-color: var(--green);
+  color: white;
+  padding: 10px 30px;
+  border: 0;
+  margin: auto;
+  border-radius: 40px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--hover);
+}
+
+li.correct {
+  background-color: #90d075;
+  border-color: #236000;
+}
+
+li.incorrect {
+  background-color: #eebbbb;
+  border-color: #8a0000;
+}
+
+
+
